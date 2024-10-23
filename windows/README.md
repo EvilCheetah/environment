@@ -1,2 +1,2 @@
 # Description
-This directory holds the scripts to install the package.
+This directory contains the scripts for installing packages on Windows.
