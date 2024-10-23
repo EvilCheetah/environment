@@ -1,5 +1,5 @@
-$packages = Get-Content -Path "./winget.packages.env"         |
-    ForEach-Object { $_.Trim() }                       |
+$packages = Get-Content -Path "$PSScriptRoot/../packages/winget.packages.env" |
+    ForEach-Object { $_.Trim() }                                |
     Where-Object   { $_ -and -not $_.StartsWith('#') }
 
 

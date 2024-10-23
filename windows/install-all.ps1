@@ -1,2 +1,2 @@
-& ./winget.install.ps1
-& ./golang.install.ps1
+& ./scripts/winget.install.ps1
+& ./scripts/golang.install.ps1
