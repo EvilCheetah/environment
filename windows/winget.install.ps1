@@ -1,8 +1,9 @@
-$packages = Get-Content -Path "./packages.env"         |
+$packages = Get-Content -Path "./winget.packages.env"         |
     ForEach-Object { $_.Trim() }                       |
     Where-Object   { $_ -and -not $_.StartsWith('#') }
 
 
+# winget Packages
 foreach ($package in $packages)
 {
     winget install --id $package    `
