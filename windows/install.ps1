@@ -1,4 +1,6 @@
-$packages = Get-Content -Path "./packages.txt"
+$packages = Get-Content -Path "./packages.env"         |
+    ForEach-Object { $_.Trim() }                       |
+    Where-Object   { $_ -and -not $_.StartsWith('#') }
 
 
 foreach ($package in $packages)
